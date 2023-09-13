@@ -7,7 +7,7 @@
 
 let country = "USA";
 let continent = "Asia";
-let population = 1000000000;
+let population = 230000000;
 
 // console.log(country);
 // console.log(continent);
@@ -136,3 +136,112 @@ if (markHigherBMI) {
     )}) is higher than Mark's (${BMIMark.toFixed(2)})`
   );
 }
+
+////////////////////////////////////////////////////////////////
+
+// Coding Challenge #3
+// There are two gymnastics teams, Dolphins and Koalas. They compete against each
+// other 3 times. The winner with the highest average score wins a trophy!
+// Your tasks:
+// 1. Calculate the average score for each team, using the test data below
+// 2. Compare the team's average scores to determine the winner of the competition,
+// and print it to the console. Don't forget that there can be a draw, so test for that
+// as well (draw means they have the same average score)
+// 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+// team only wins if it has a higher score than the other team, and the same time a
+// score of at least 100 points. Hint: Use a logical operator to test for minimum
+// score, as well as multiple else-if blocks 😉
+// 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+// both teams have the same score and both have a score greater or equal 100
+// points. Otherwise, no team wins the trophy
+// Test data:
+// § Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+// § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+// § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+let scoreDolphins = (96 + 108 + 101) / 3;
+let scoreKoalas = (88 + 91 + 110) / 3;
+
+console.log(scoreDolphins, scoreKoalas);
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("The winner is Dolphin");
+} else if (scoreDolphins < scoreKoalas) {
+  console.log("The winner is Koalas");
+} else {
+  console.log("It is draw");
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+const day = "Monday"; // Monday
+
+switch (day) {
+  case "Monday":
+    console.log("Monday");
+    break;
+  case "Tuesday":
+    console.log("Tuesday");
+}
+
+////////////////////////////////////////////////////////////////
+
+// LECTURE: The switch Statement
+// 1. Use a switch statement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'
+// hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all other simply log 'Great language too :D
+
+// let languagePrompt = prompt("Which language do you speak? ");
+
+switch (languagePrompt) {
+  case "Arabic":
+    console.log("Great Language");
+  case "ArabicEnglish":
+    console.log("Great Language bilingual");
+  case "English":
+    console.log("Smart ");
+  default:
+    console.log("Awesome ");
+}
+
+////////////////////////////////////////////////////////////////
+
+// LECTURE: The Conditional (Ternary) Operator
+// 1. If your country's population is greater than 33 million, use the ternary operator
+// to log a string like this to the console: 'Portugal's population is above average'.
+// Otherwise, simply log 'Portugal's population is below average'. Notice how only
+// one word changes between these two sentences!
+// 2. After checking the result, change the population temporarily to 13 and then to
+// 130. See the different results, and set the population back to original
+
+console.log(
+  `${country}'s population is ${population > 33 ? "above" : "below"} average`
+);
+
+////////////////////////////////////////////////////////////////
+// Coding Challenge #4
+// Steven wants to build a very simple tip calculator for whenever he goes eating in a
+// restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+// 300. If the value is different, the tip is 20%.
+// Your tasks:
+// 1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+// this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can
+// start with an if/else statement, and then try to convert it to a ternary
+// operator!)
+// 2. Print a string to the console containing the bill value, the tip, and the final value
+// (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+// 316.25”
+// Test data:
+// § Data 1: Test for bill values 275, 40 and 430
+// Hints:
+// § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+// § Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+// GOOD LUCK 😀
+
+let bill = 240;
+
+let tip = 50 <= bill <= 300 ? bill * 0.15 : bill * 0.2;
