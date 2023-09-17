@@ -34,3 +34,20 @@ const calcAge = function (birthYear) {
 
 const age = calcAge(2001);
 console.log(age);
+
+////////////////////////////////////////////////////////////////
+
+let calcAge2 = (birthYear) => 2023 - birthYear;
+
+let age2 = calcAge2(2001);
+
+console.log(age2);
+
+let yearsUntilRetirement = (birthYear) => {
+  const age = 2023 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
+};
+
+let remainingYears = yearsUntilRetirement(2001);
+console.log(remainingYears);
