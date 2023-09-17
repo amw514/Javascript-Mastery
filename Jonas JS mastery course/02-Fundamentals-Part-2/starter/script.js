@@ -25,3 +25,12 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(5, 0));
+
+////////////////////////////////////////////////////////////////
+
+const calcAge = function (birthYear) {
+  return 2023 - birthYear;
+};
+
+const age = calcAge(2001);
+console.log(age);
