@@ -6,7 +6,7 @@ function add(a, b) {
   return a + b;
 }
 
-// console.log(add(4, 5));
+console.log(add(4, 5));
 
 ////////////////////////////////////////////////////////////////
 
@@ -14,17 +14,17 @@ let subtract = (a, b) => {
   return a - b;
 };
 
-// console.log(subtract(10, 7));
+console.log(subtract(10, 7));
 
 ////////////////////////////////////////////////////////////////
 
-function fruitProcessor(apples, oranges) {
-  console.log(apples, oranges);
-  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-  return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//   console.log(apples, oranges);
+//   const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(5, 0));
+// console.log(fruitProcessor(5, 0));
 
 ////////////////////////////////////////////////////////////////
 
@@ -51,3 +51,18 @@ let yearsUntilRetirement = (birthYear) => {
 
 let remainingYears = yearsUntilRetirement(2001);
 console.log(remainingYears);
+
+////////////////////////////////////////////////////////////////
+
+const cutPieces = function (fruit) {
+  return fruit * 4;
+};
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangesPieces = cutPieces(oranges);
+  const juice = `Juice with ${applePieces} apple pieces and ${orangesPieces} orange pieces`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
