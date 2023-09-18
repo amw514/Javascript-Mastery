@@ -87,3 +87,11 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 };
 
 checkWinner(scoreDolphins, scoreKoalas);
+
+//////////////////////////////////////////////////////////////////////////
+
+// Arrays
+
+const friends = ["Afriend", "Bfriend", "Cfriend", "Dfriend"];
+
+console.log(friends);
