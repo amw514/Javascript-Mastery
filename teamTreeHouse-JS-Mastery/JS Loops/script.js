@@ -9,3 +9,7 @@ while (counter < 1000) {
   console.log(getRandomNumber());
   counter += 1;
 }
+
+for (i = 0; i < 10; i++) {
+  console.log(getRandomNumber());
+}
