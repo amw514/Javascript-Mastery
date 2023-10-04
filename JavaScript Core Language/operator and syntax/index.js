@@ -48,3 +48,23 @@ switch (fruit) {
   default:
     console.log("I don't know what this is.");
 }
+
+// Add new exmaple In this example, we're checking the value of the fruit variable and executing different code based on its value. If fruit is "apple", we log "This is an apple." to the console. If fruit is "banana", we log "This is a banana." to the console. If fruit is "orange", we log "This is an orange." to the console. If fruit is any other value, we throw an error with the message "Unrecognized fruit: " followed by the value of fruit. This is an example of how to use the switch statement to handle unexpected values and throw an error if the value is not recognized.
+
+// Note that the throw statement is used to throw an error in JavaScript. When an error is thrown, the program stops executing and the error message is displayed in the console.
+
+let fruit = "apple";
+
+switch (fruit) {
+  case "apple":
+    console.log("This is an apple.");
+    break;
+  case "banana":
+    console.log("This is a banana.");
+    break;
+  case "orange":
+    console.log("This is an orange.");
+    break;
+  default:
+    throw new Error("Unrecognized fruit: " + fruit);
+}
