@@ -53,6 +53,8 @@ switch (fruit) {
 
 // Note that the throw statement is used to throw an error in JavaScript. When an error is thrown, the program stops executing and the error message is displayed in the console.
 
+// A switch statement in JavaScript is a control flow statement used to evaluate an expression and perform different actions based on its value. It is often used when you have multiple conditions to check against a single value and want to simplify the code.
+
 let fruit = "apple";
 
 switch (fruit) {
