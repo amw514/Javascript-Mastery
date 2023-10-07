@@ -80,9 +80,11 @@ switch (color) {
   case "light blue":
   case "dark blue":
     console.log("Color is Blue");
+    break;
 
   case "red":
   case "light red":
   case "dark red":
     console.log("Color is red");
+    break;
 }
