@@ -70,3 +70,21 @@ switch (fruit) {
   default:
     throw new Error("Unrecognized fruit: " + fruit);
 }
+
+// Switch with multiple cases and same output
+
+let color = "red";
+
+switch (color) {
+  case "blue":
+  case "light blue":
+  case "dark blue":
+    console.log("Color is Blue");
+    break;
+
+  case "red":
+  case "light red":
+  case "dark red":
+    console.log("Color is red");
+    break;
+}
