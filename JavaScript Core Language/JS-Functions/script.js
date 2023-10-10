@@ -37,3 +37,19 @@ let increment = (() => {
 increment();
 increment();
 increment();
+
+let greeting = () => {
+  return "Hello World!";
+};
+
+let messages = greeting();
+
+console.log(messages);
+
+let sum = (sum1, sum2) => {
+  return sum1 + sum2;
+};
+
+let output = sum(2, 3);
+
+console.log(output);
