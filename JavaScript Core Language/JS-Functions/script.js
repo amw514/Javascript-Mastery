@@ -53,3 +53,16 @@ let sum = (sum1, sum2) => {
 let output = sum(2, 3);
 
 console.log(output);
+
+// Call Method
+
+let person1 = { name: "John", age: 22 };
+let person2 = { name: "Mary", age: 25 };
+
+let sayHi = function () {
+  console.log("Hi " + this.name);
+};
+
+sayHi();
+sayHi.call(person1);
+sayHi.call(person2);
