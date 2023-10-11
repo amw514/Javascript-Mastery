@@ -66,3 +66,24 @@ let sayHi = function () {
 sayHi();
 sayHi.call(person1);
 sayHi.call(person2);
+
+// A closure Function
+
+let x = 1;
+
+let parentFunction = () => {
+  let localVar = 2;
+
+  let childFunction = () => {
+    console.log((x += 5));
+    console.log((localVar += 10));
+  };
+
+  return childFunction;
+};
+
+let result = parentFunction();
+
+console.log(result);
+
+result();
