@@ -27,3 +27,32 @@ const restaurant = {
     },
   },
 };
+
+const arr = [1, 2, 3, 4, 5];
+
+const [x, y, z, , z1] = arr;
+
+console.log(x, y, z, z1);
+console.log(x);
+
+let [main, secondary] = restaurant.categories;
+
+console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
+
+console.log(main, secondary);
+
+// Destructuring for Objects
+
+const { name, openingHours, categories } = restaurant;
+
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  categories: tags,
+  openingHours: hours,
+} = restaurant;
+
+console.log(restaurantName, tags, hours);
