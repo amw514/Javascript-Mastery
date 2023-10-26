@@ -1,13 +1,8 @@
-let items = document.querySelectorAll("li");
+const request = new XMLHttpRequest();
 
-let ul = document.querySelectorAll("ul");
-
-ul.addEventListener("click", () => {
-  ul.style.border = "5px solid black";
+request.addEventListener("readystatechange", () => {
+  console.log(request);
 });
 
-items.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    event.target.style.textDecoration = "line-through";
-  });
-});
+request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
+request.send();
