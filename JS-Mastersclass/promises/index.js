@@ -55,7 +55,24 @@ const fakeRequest = (url) => {
           { id: 1, username: "Bilbo" },
           { id: 5, username: "Esmeralda" },
         ],
-        "/about": "This is about page!",
+        "/users/1": {
+          id: 1,
+          username: "Bilbo",
+          upvotes: 360,
+          city: "Lisbon",
+          topPostId: 454321,
+        },
+        "/users/5": {
+          id: 5,
+          username: "Esmerelda",
+          upvotes: 571,
+          city: "Honolulu",
+        },
+        "/posts/454321": {
+          id: 454321,
+          title: "Ladies & Gentlemen, may I introduce my pet pig, Hamlet",
+        },
+        "/about": "This is the about page!",
       };
 
       const data = pages[url];
@@ -71,10 +88,14 @@ const fakeRequest = (url) => {
 
 fakeRequest("/users")
   .then((res) => {
-    console.log("Status Code", res.status);
-    console.log("Data", res.data);
-    console.log("Request Worked");
+    const id = res.data[0].id;
+    fakeRequest(`/users/${id}`).then((res) => {
+      const postID = res.data.topPostId;
+      fakeRequest(`/posts/${postID}`).then((res) => {
+        console.log(res);
+      });
+    });
   })
-  .catch((res) => {
-    console.log("Status Code", res.status);
+  .catch((err) => {
+    console.log("Status Code", err.status);
   });
